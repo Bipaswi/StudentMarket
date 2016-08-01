@@ -3,6 +3,10 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 
+function getFormInfo($v) {
+  return isset($_POST[$v]) ? htmlspecialchars($_POST[$v]) : null;
+}
+
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection

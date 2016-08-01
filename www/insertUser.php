@@ -4,6 +4,10 @@ $username = "username";
 $password = "password";
 $dbname = "userDatabase";
 
+function getFormInfo($v) {
+  return isset($_POST[$v]) ? htmlspecialchars($_POST[$v]) : null;
+}
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
